@@ -4,6 +4,8 @@ import java.util.Stack;
 
 public class InBuiltExample {
     public static void main(String[] args) {
+        //Stack is a class that implements a last-in-first-out (LIFO) stack of objects.
+        //It is Class Stack<E> extends Vector<E>
         Stack<Integer> stack = new Stack<>();
 
         stack.push(10);
