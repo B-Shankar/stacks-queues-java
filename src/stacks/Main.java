@@ -25,6 +25,8 @@ public class Main {
         System.out.println("Popped element: " + stack.pop());
         System.out.println("Popped element: " + stack.pop());
 
+        // Uncommenting the following line will throw StackException
+        //System.out.println("Popped element: " + stack.pop());
 
     }
 }
