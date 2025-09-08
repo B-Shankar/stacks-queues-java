@@ -28,5 +28,7 @@ public class Main {
         // Uncommenting the following line will throw StackException
         //System.out.println("Popped element: " + stack.pop());
 
+        System.out.println("Is stack empty? " + stack.isEmpty());
+        System.out.println("Is stack full? " + stack.isFull());
     }
 }

@@ -15,11 +15,11 @@ public class CustomStack {
         this.data = new int[size];
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return pointer == data.length - 1;
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return pointer == -1;
     }
 
