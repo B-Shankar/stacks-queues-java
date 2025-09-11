@@ -13,10 +13,12 @@ class MyQueue {
         second = new Stack<>();
     }
 
+    // O(1)
     public void push(int x) {
         first.push(x);
     }
 
+    // O(n)
     public int pop() {
         while (!first.isEmpty()) {
             second.push(first.pop());
@@ -31,6 +33,7 @@ class MyQueue {
         return removed;
     }
 
+    // O(n)
     public int peek() {
         while (!first.isEmpty()) {
             second.push(first.pop());
