@@ -6,7 +6,7 @@ import java.util.Stack;
 //Next Greater Element in Array: GFG
 class NextGreaterElement {
 
-    static ArrayList<Integer> nextLargerElement(int[] arr) {
+    static ArrayList<Integer> nextLargerElementWithStack(int[] arr) {
 
         int n = arr.length;
         ArrayList<Integer> result = new ArrayList<>();
@@ -38,9 +38,35 @@ class NextGreaterElement {
         return result;
     }
 
+    //With ArrayList
+    static ArrayList<Integer> nextLargerElement(int[] arr) {
+        int n = arr.length;
+        ArrayList<Integer> res = new ArrayList<>();
+
+        // initialize res with -1 for all elements
+        for (int i = 0; i < n; i++) {
+            res.add(-1);
+        }
+
+        // iterate through each element in the array
+        for (int i = 0; i < n; i++) {
+
+            // check for the next greater element
+            // in the rest of the array
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] > arr[i]) {
+                    res.set(i, arr[j]);
+                    break;
+                }
+            }
+        }
+
+        return res;
+    }
+
     public static void main(String[] args) {
         int[] arr = { 6, 8, 0, 1, 3 };
-        ArrayList<Integer> result = nextLargerElement(arr);
+        ArrayList<Integer> result = nextLargerElementWithStack(arr);
         for (int x : result) {
             System.out.print(x + " ");
         }
