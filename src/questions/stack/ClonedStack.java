@@ -2,6 +2,7 @@ package questions.stack;
 
 import java.util.*;
 
+//Clone a Stack without using extra space: GFG
 class ClonedStack {
 
     static void clonedStack(Stack<Integer> st, Stack<Integer> cloned) {
